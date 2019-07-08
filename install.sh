@@ -11,6 +11,6 @@ function addSourceIfNeeded() {
 addSourceIfNeeded "$HOME/.zshrc"
 addSourceIfNeeded "$HOME/.bashrc"
 
-curl -SsL https://raw.githubusercontent.com/stasel/personal/master/bashrc/stasel.sh > ~/.stasel.sh
+curl -SsL https://raw.githubusercontent.com/stasel/bashrc/master/stasel.sh > ~/.stasel.sh
 echo "Done. Use the following command to apply the changes now"
 echo "  source ~/.stasel.sh"
