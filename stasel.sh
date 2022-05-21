@@ -59,6 +59,7 @@ if [[ "$OSTYPE" == "darwin"*  ]]; then
         echo ${xcworkspace}
         open ${xcworkspace}
     }
+    alias ddd="rm -rf ~/Library/Developer/Xcode/DerivedData/*"
 fi
 
 ###################################
@@ -76,6 +77,11 @@ if [ -x "$(command -v x11vnc)" ]; then
     function vnc() {
         x11vnc -display :0 -noxrecord -noxfixes -noxdamage -forever -passwd $1 -rfbport 5900
     }
+fi
+
+if [ -x "$(command -v loginctl)" ]; then
+    alias lock="loginctl lock-session 1"
+    alias unlock="loginctl unlock-session 1"
 fi
 
 ###################################
