@@ -80,8 +80,8 @@ if [ -x "$(command -v x11vnc)" ]; then
 fi
 
 if [ -x "$(command -v loginctl)" ]; then
-    alias lock="loginctl lock-session 1"
-    alias unlock="loginctl unlock-session 1"
+    alias lock="loginctl lock-session $(loginctl list-sessions | grep seat | awk '{print $1}')"
+    alias unlock="loginctl unlock-session $(loginctl list-sessions | grep seat | awk '{print $1}')"
 fi
 
 ###################################
