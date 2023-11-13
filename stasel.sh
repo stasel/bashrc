@@ -36,7 +36,6 @@ function myip() {
     echo -e "Remote IP\t ${remoteIP}"
 }
 
-alias btc="curl -sL https://api.coindesk.com/v1/bpi/currentprice/BTC.json | python -c \"import sys, json; price = json.load(sys.stdin)['bpi']['USD']['rate_float']; print '1 BTC = {0:.0f} USD'.format(price)\""
 alias updaterc="bash <(curl -sSL https://raw.githubusercontent.com/stasel/bashrc/master/install.sh) && source ~/.stasel.sh"
 
 ###################################
